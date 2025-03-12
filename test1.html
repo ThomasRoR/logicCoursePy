@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+
+let idadesEntrada = prompt("escreva uma lista de idades para serem somadas")
+let idadesString = idadesEntrada.split(',');
+
+function idadesToNumber() {
+    if (idadesString.every(num => !isNaN(num))) {
+        idadesNumber = idadesString.map(Number);
+    }
+    else {
+        alert("Entrada inválida. Por favor, insira apenas números separados por vírgula.");
+    }
+    return idadesNumber;
+};
+
+let arrayIdades = idadesToNumber();
+let totalIdades = 0;
+
+for(i = 0; i< arrayIdades.length; i++){
+    totalIdades += arrayIdades[i];
+}
+
+alert("O VALOR DAS IDADES SOMADAS É:" + totalIdades)
+
+
+
+
+</script>
+</html>
